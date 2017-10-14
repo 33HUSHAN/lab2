@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"  
+    "http://struts.apache.org/dtds/struts-2.5.dtd">  
+    
+<struts>  
+     <include file="struts-default.xml"/>
+     <package name="projecttest2" extends="struts-default">
+     <action name="index">
+    
+     <result>/index.jsp</result>
+     </action>
+     <action name="tosearch">
+     <result>/search.jsp</result>
+     </action>
+     
+     <action name="todelete">
+     <result>/delete.jsp</result>
+     </action>
+
+     <action name="toshow">
+     <result>/detail.jsp</result>
+     </action>
+     
+    	
+    	<action name="search" method="Search" class="projecttest2.action">
+    	<result>/search.jsp</result>
+    	</action>
+    	
+    	<action name="detail" method="showdetail" class="projecttest2.action">
+    	<result>/detail.jsp</result>
+    	</action>
+    	
+    	<action name="delete" method="Delete" class="projecttest2.action">
+    	<result>/delete.jsp</result>
+    	</action>
+ 
+    </package>
+  
+</struts>
